@@ -63,7 +63,7 @@ const verification = new SliderVerification('verification-container', {
 ```
 
 配置选项
-
+```
 参数 类型 默认值 描述
 
 width number 350 验证框宽度(px)
@@ -79,9 +79,9 @@ tolerance number 10 容错像素范围
 onSuccess function null 验证成功回调
 
 onFail function null 验证失败回调
-
+```
 示例代码
-
+```
 // 完整配置示例
 const verification = new SliderVerification('verification-container', {
     width: 400,
@@ -104,7 +104,7 @@ const verification = new SliderVerification('verification-container', {
 document.getElementById('reset-btn').addEventListener('click', function() {
     verification.reset();
 });
-
+```
 
 许可证
 
