@@ -20,27 +20,37 @@
 
 安装使用
 
-1. 下载项目文件：
+1. 下载项目文件
+```
 git clone https://github.com/your-username/slider-verification.git
+```
 
 
 2. 引入必要的文件：
+```
 <!-- 引入样式 -->
 <link rel="stylesheet" href="css/verification.css">
+```
 
 <!-- 引入脚本 -->
+```
 <script src="js/verification.js"></script>
+```
 
 
 3. 创建HTML容器：
+```
 <div id="verification-container"></div>
-
+```
 
 4. 初始化验证组件：
+```
 // 基本用法
 const verification = new SliderVerification('verification-container');
+```
 
 // 带配置的用法
+```
 const verification = new SliderVerification('verification-container', {
     width: 350,
     height: 200,
@@ -50,7 +60,7 @@ const verification = new SliderVerification('verification-container', {
         // 执行后续操作
     }
 });
-
+```
 
 配置选项
 
@@ -96,125 +106,8 @@ document.getElementById('reset-btn').addEventListener('click', function() {
 });
 
 
-API 方法
-
-reset()
-
-重置验证状态，生成新的验证挑战。
-verification.reset();
-
-
-destroy()
-
-销毁验证实例，清理事件监听器。
-verification.destroy();
-
-
-自定义样式
-
-组件支持通过CSS变量进行主题定制：
-:root {
-    --primary-color: #4285f4;      /* 主色调 */
-    --success-color: #34a853;     /* 成功颜色 */
-    --error-color: #f44336;       /* 错误颜色 */
-    --bg-color: #f5f5f5;          /* 背景色 */
-    --border-radius: 8px;         /* 圆角大小 */
-}
-
-
-浏览器兼容性
-
-浏览器 最低版本
-
-Chrome 60+
-
-Firefox 55+
-
-Safari 12+
-
-Edge 79+
-
-iOS Safari 12+
-
-Android Browser 81+
-
-项目结构
-
-
-slider-verification/
-├── css/
-│   └── verification.css     # 样式文件
-├── js/
-│   └── verification.js      # 核心脚本
-├── examples/                # 示例目录
-│   ├── basic.html          # 基础用法示例
-│   ├── custom.html         # 自定义配置示例
-│   └── advanced.html       # 高级用法示例
-├── docs/                   # 文档目录
-│   └── api.md             # API文档
-└── README.md              # 项目说明
-
-
-开发指南
-
-本地开发
-
-1. 克隆仓库：
-git clone https://github.com/your-username/slider-verification.git
-cd slider-verification
-
-
-2. 启动本地服务器：
-# 使用 Python
-python -m http.server 8000
-
-# 或使用 Node.js
-npx http-server
-
-
-3. 打开浏览器访问 http://localhost:8000/examples/
-
-构建自定义版本
-
-如需修改源码，请编辑 js/verification.js 文件，然后运行：
-# 压缩代码（需要安装uglify-js）
-uglifyjs js/verification.js -o js/verification.min.js
-
-
-贡献指南
-
-我们欢迎各种形式的贡献！请阅读 CONTRIBUTING.md 了解如何参与项目开发。
-
-更新日志
-
-v1.0.0 (2024-01-20)
-
-• ✅ 初始版本发布
-
-• ✅ 基础滑块验证功能
-
-• ✅ 响应式设计支持
-
-• ✅ 自定义配置选项
-
 许可证
 
 本项目采用 MIT 许可证 - 查看 LICENSE 文件了解详情。
-
-相关项目
-
-• https://github.com/your-username/vue-slider-verification - Vue.js 版本
-
-• https://github.com/your-username/react-slider-verification - React 版本
-
-支持与反馈
-
-如果您在使用过程中遇到问题或有改进建议，请通过以下方式联系我们：
-
-• 📧 邮箱：your-email@example.com
-
-• 💬 提交 https://github.com/your-username/slider-verification/issues
-
-• 📖 查看 https://github.com/your-username/slider-verification/wiki 获取更多文档
 
 星星这个项目 ⭐ 如果你觉得它有用！
