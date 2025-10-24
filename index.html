@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证示例</title>
+    <link rel="stylesheet" href="verification.css">
+</head>
+<body>
+    <!-- 验证容器 -->
+    <div id="verification-container"></div>
+
+    <script src="verification.js"></script>
+    <script>
+        // 页面加载完成后初始化验证
+        document.addEventListener('DOMContentLoaded', function() {
+            // 创建验证实例
+            const verification = new SliderVerification('verification-container', {
+
+                // 回调函数
+                onSuccess: function() {
+                    console.log('验证成功！');
+                    // 这里可以添加验证成功后的逻辑
+                },
+                onFail: function(attempts) {
+                    console.log(`验证失败，已尝试 ${attempts} 次`);
+                    // 这里可以添加验证失败后的逻辑
+                }
+            });
+
+            // 将实例保存到全局变量，方便调试
+            window.verification = verification;
+        });
+    </script>
+</body>
+</html>
